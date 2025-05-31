@@ -2,7 +2,6 @@
 
 import {
   useMiniKit,
-  useOpenUrl,
 } from "@coinbase/onchainkit/minikit";
 import {
   Name,
@@ -29,7 +28,6 @@ const ETH_PURCHASE_ADDRESS = "0xaB920659eb7457b7C223e450D33959ED923E9Ffe";
 
 export default function PresalePage() {
   const { setFrameReady, isFrameReady } = useMiniKit();
-  const openUrl = useOpenUrl();
   const [ethAmount, setEthAmount] = useState("");
   const [copied, setCopied] = useState(false);
   const [statusMsg, setStatusMsg] = useState("");
@@ -225,7 +223,7 @@ export default function PresalePage() {
           {/* <button
             type="button"
             className="text-[#6A6A6A] hover:text-[#0B0B61] text-xs"
-            onClick={() => openUrl("https://base.org/builders/minikit")}
+            onClick={() => console.log("Footer button clicked - openUrl was removed due to being unused.")}
           >
             BUILT ON BASE WITH MINIKIT
           </button> */}
