@@ -181,3 +181,25 @@ body.crt-mode * {
   background-color: transparent !important;
   box-shadow: none !important;
 }
+
+/* ---------- DEV PREVIEW MINI APP SIZE ---------- */
+.frame-preview-wrapper {
+  width: 424px;
+  height: 695px;
+  max-width: 100%;
+  max-height: 100vh;
+  margin: 0 auto;
+  overflow: auto;
+  position: relative;
+  border: 2px solid rgba(0, 255, 106, 0.4);
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 424px) {
+  .frame-preview-wrapper {
+    width: 100%;
+    height: 100vh;
+    border-left: none;
+    border-right: none;
+  }
+}

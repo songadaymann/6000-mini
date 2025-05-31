@@ -103,13 +103,13 @@ export default function PresalePage() {
 
   return (
     <div className="flex flex-col min-h-screen bg-[#F9F9F7] text-[#2B2B2B] font-['Courier_New','Source_Code_Pro',_monospace] p-4 md:p-8 items-center pb-24"> {/* pb-24 to avoid overlap with bottom nav */}
-      <div className="w-full max-w-4xl bg-[#FFFFFF] border-4 border-[#B0B0B0] rounded-md shadow-lg p-6 md:p-10 flex flex-col flex-grow">
+      <div className="w-full max-w-xl border-2 rounded-md p-4 flex flex-col flex-grow">
         {/* Header with Wallet Connect */}
-        <header className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl md:text-4xl font-extrabold tracking-wide text-[#1A1A1A]">TOKEN PRESALE</h1>
+        <header className="flex flex-col items-start mb-6 space-y-2">
+          <h1 className="text-3xl md:text-4xl font-extrabold tracking-wide text-[#1A1A1A]">$TAXES TOKEN PRESALE</h1>
           <Wallet className="z-10">
             <ConnectWallet>
-              <button className="bg-[#0B0B61] hover:bg-[#1C1C7A] text-white font-semibold py-2 px-4 rounded shadow-sm">
+              <button className="bg-[#0B0B61] hover:bg-[#1C1C7A] text-white font-semibold py-1 px-3 rounded shadow-sm text-sm">
                 <Name className="text-inherit" />
               </button>
             </ConnectWallet>
@@ -161,7 +161,7 @@ export default function PresalePage() {
           {activeTab === "transaction" && (
             <div className="space-y-6 bg-[#F3F3F3] p-6 rounded-md shadow-md">
               <div>
-                <h2 className="text-xl font-semibold text-[#0B0B61] mb-1">ETH Purchase Address</h2>
+                <h2 className="text-xl font-semibold text-[#0B0B61] mb-1">SEND ETH TO</h2>
                 <div className="flex items-center space-x-2 bg-[#EDEDED] p-3 rounded">
                   <input
                     type="text"
@@ -176,11 +176,11 @@ export default function PresalePage() {
                     {copied ? "Copied!" : "Copy"}
                   </button>
                 </div>
-                <p className="text-xs text-red-700 mt-1">Send only ETH (mainnet, base, arb, op) to this address.</p>
+                <p className="text-xs text-red-700 mt-1">Send <b>only ETH</b> (mainnet, base, arb, op).</p>
               </div>
 
               <div className="space-y-3">
-                <label htmlFor="ethAmount" className="block text-lg font-semibold text-[#0B0B61]">Amount in ETH</label>
+                
                 <div className="flex items-center bg-[#FFFFFF] p-1 rounded border border-[#B0B0B0]">
                   <input
                     type="number"

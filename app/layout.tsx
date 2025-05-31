@@ -45,9 +45,11 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-background crt-mode">
         <CrtOverlay />
-        <div id="terminal-container">
-          <div id="terminal-inner">
-            <Providers>{children}</Providers>
+        <div className="frame-preview-wrapper">
+          <div id="terminal-container">
+            <div id="terminal-inner">
+              <Providers>{children}</Providers>
+            </div>
           </div>
         </div>
       </body>
