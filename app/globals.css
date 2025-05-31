@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS variables for light/dark mode are no longer needed as theme is explicitly set */
+/*
+:root {
+  --background: #ffffff;
+  --foreground: #111111;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #111111;
+    --foreground: #ffffff;
+  }
+}
+*/
+
+body {
+  /*
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "Geist", sans-serif; // Removed to allow component-level font choices
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 80%;
+  */
+  /* Add any truly global body styles here if needed, but keep it minimal */
+  margin: 0; /* Basic reset */
+  padding: 0; /* Basic reset */
+  box-sizing: border-box; /* Consistent box model */
+}
