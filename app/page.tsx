@@ -102,16 +102,14 @@ export default function PresalePage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#F9F9F7] text-[#2B2B2B] font-['Courier_New','Source_Code_Pro',_monospace] p-4 md:p-8 items-center pb-24"> {/* pb-24 to avoid overlap with bottom nav */}
+    <div className="flex flex-col min-h-screen bg-[#F9F9F7] text-[#2B2B2B] font-['Courier_New','Source_Code_Pro',_monospace] p-4 md:p-8 items-center pb-28"> {/* Adjusted pb for lifted nav */}
       <div className="w-full max-w-xl border-2 rounded-md p-4 flex flex-col flex-grow">
         {/* Header with Wallet Connect */}
-        <header className="flex flex-col items-start mb-6 space-y-2">
+        <header className="flex flex-col items-start mb-3 space-y-1">
           <h1 className="text-3xl md:text-4xl font-extrabold tracking-wide text-[#1A1A1A]">$TAXES TOKEN PRESALE</h1>
           <Wallet className="z-10">
-            <ConnectWallet>
-              <button className="bg-[#0B0B61] hover:bg-[#1C1C7A] text-white font-semibold py-1 px-3 rounded shadow-sm text-sm">
-                <Name className="text-inherit" />
-              </button>
+            <ConnectWallet className="bg-[#0B0B61] hover:bg-[#1C1C7A] text-white font-semibold py-1 px-2 rounded shadow-sm text-xs">
+              <Name className="text-inherit" />
             </ConnectWallet>
             <WalletDropdown>
               <Identity className="px-4 pt-3 pb-2 bg-[#EDEDED] text-[#2B2B2B]" hasCopyAddressOnClick>
@@ -128,7 +126,7 @@ export default function PresalePage() {
         {/* MAIN CONTENT BASED ON TAB */}
         <div className="flex-grow">
           {activeTab === "about" && (
-            <div className="space-y-4 text-[#2B2B2B]">
+            <div className="space-y-2 text-[#2B2B2B]">
               <div>
                 <h2 className="text-xl font-semibold text-[#0B0B61]">Ticker: $TAXES</h2>
               </div>
@@ -159,19 +157,19 @@ export default function PresalePage() {
           )}
 
           {activeTab === "transaction" && (
-            <div className="space-y-6 bg-[#F3F3F3] p-6 rounded-md shadow-md">
+            <div className="space-y-3 bg-[#F3F3F3] p-3 rounded-md shadow-md">
               <div>
                 <h2 className="text-xl font-semibold text-[#0B0B61] mb-1">SEND ETH TO</h2>
-                <div className="flex items-center space-x-2 bg-[#EDEDED] p-3 rounded">
+                <div className="bg-[#EDEDED] pl-1 pr-2 py-2 rounded">
                   <input
                     type="text"
                     value={ETH_PURCHASE_ADDRESS}
                     readOnly
-                    className="bg-transparent text-[#2B2B2B] border-none focus:ring-0 w-full text-sm md:text-base"
+                    className="bg-transparent text-[#2B2B2B] border-none focus:ring-0 w-full text-[11px] leading-tight mb-1"
                   />
                   <button
                     onClick={handleCopyAddress}
-                    className="bg-[#0B0B61] hover:bg-[#1C1C7A] text-white font-semibold py-2 px-3 rounded text-sm shadow"
+                    className="bg-[#0B0B61] hover:bg-[#1C1C7A] text-white font-semibold py-1 px-2 rounded text-xs shadow"
                   >
                     {copied ? "Copied!" : "Copy"}
                   </button>
@@ -223,19 +221,19 @@ export default function PresalePage() {
         </div>
 
         {/* Footer */}
-        <footer className="mt-10 pt-6 border-t border-[#B0B0B0] flex justify-center">
-          <button
+        <footer className="mt-6 pt-3 border-t border-[#B0B0B0] flex justify-center">
+          {/* <button
             type="button"
             className="text-[#6A6A6A] hover:text-[#0B0B61] text-xs"
             onClick={() => openUrl("https://base.org/builders/minikit")}
           >
             BUILT ON BASE WITH MINIKIT
-          </button>
+          </button> */}
         </footer>
       </div>
 
       {/* BOTTOM TAB NAVIGATION */}
-      <nav className="fixed bottom-0 left-0 right-0 bg-[#EDEDED] border-t border-[#B0B0B0] flex text-center">
+      <nav className="fixed bottom-16 left-0 right-0 bg-[#EDEDED] border-t border-[#B0B0B0] flex text-center"> {/* Lifted nav */}
         <button
           onClick={() => setActiveTab("transaction")}
           className={`flex-1 py-3 font-semibold ${activeTab === "transaction" ? "text-[#0B0B61] bg-[#FFFFFF]" : "text-[#6A6A6A]"}`}

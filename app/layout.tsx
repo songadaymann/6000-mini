@@ -3,7 +3,7 @@ import "@coinbase/onchainkit/styles.css";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Providers } from "./providers";
-import CrtOverlay from "./components/CrtOverlay";
+// import CrtOverlay from "./components/CrtOverlay"; // Commented out
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -44,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-background crt-mode">
-        <CrtOverlay />
+        {/* <CrtOverlay /> */}{/* Commented out */}
         <div className="frame-preview-wrapper">
           <div id="terminal-container">
             <div id="terminal-inner">
