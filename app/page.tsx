@@ -181,10 +181,6 @@ export default function PresalePage() {
 
               <div className="space-y-3">
                 <label htmlFor="ethAmount" className="block text-lg font-semibold text-[#0B0B61]">Amount in ETH</label>
-                <div className="flex items-center space-x-2">
-                  <button className="bg-[#C9C9C9] text-[#6A6A6A] py-2 px-4 rounded-t-lg opacity-50 cursor-not-allowed text-sm">Ethereum</button>
-                  <button className="bg-[#F3F3F3] border border-b-0 border-[#B0B0B0] text-[#0B0B61] py-2 px-4 rounded-t-lg text-sm">jmann.eth</button>
-                </div>
                 <div className="flex items-center bg-[#FFFFFF] p-1 rounded border border-[#B0B0B0]">
                   <input
                     type="number"
