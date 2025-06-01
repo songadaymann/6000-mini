@@ -100,7 +100,7 @@ export default function PresalePage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#F9F9F7] text-[#2B2B2B] font-['Courier_New','Source_Code_Pro',_monospace] p-4 md:p-8 items-center pb-28"> {/* Adjusted pb for lifted nav */}
+    <div className="flex flex-col min-h-screen bg-[#F9F9F7] text-[#2B2B2B] font-['Courier_New','Source_Code_Pro',_monospace] p-4 md:p-8 items-center pb-24"> {/* Extra bottom padding so content isn't hidden behind fixed nav */}
       <div className="w-full max-w-xl border-2 rounded-md p-4 flex flex-col flex-grow">
         {/* Header with Wallet Connect */}
         <header className="flex flex-col items-start mb-3 space-y-1">
@@ -231,7 +231,7 @@ export default function PresalePage() {
       </div>
 
       {/* BOTTOM TAB NAVIGATION */}
-      <nav className="fixed bottom-16 left-0 right-0 bg-[#EDEDED] border-t border-[#B0B0B0] flex text-center"> {/* Lifted nav */}
+      <nav className="fixed bottom-0 left-0 right-0 bg-[#EDEDED] border-t border-[#B0B0B0] flex text-center z-20"> {/* Fixed to bottom of viewport */}
         <button
           onClick={() => setActiveTab("transaction")}
           className={`flex-1 py-3 font-semibold ${activeTab === "transaction" ? "text-[#0B0B61] bg-[#FFFFFF]" : "text-[#6A6A6A]"}`}
