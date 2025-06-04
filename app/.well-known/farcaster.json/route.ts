@@ -12,7 +12,8 @@ function withValidProperties(
 }
 
 export async function GET() {
-  const URL = process.env.NEXT_PUBLIC_URL;
+  const rawURL = process.env.NEXT_PUBLIC_URL ?? "";
+  const URL = rawURL.replace(/\/+$/, ""); // strip trailing slashes for safe concatenation
 
   return Response.json({
     accountAssociation: {
@@ -26,7 +27,7 @@ export async function GET() {
       subtitle: process.env.NEXT_PUBLIC_APP_SUBTITLE,
       description: process.env.NEXT_PUBLIC_APP_DESCRIPTION,
       screenshotUrls: [],
-      iconUrl: process.env.NEXT_PUBLIC_APP_ICON,
+      iconUrl: process.env.NEXT_PUBLIC_APP_ICON || process.env.NEXT_PUBLIC_ICON_URL,
       splashImageUrl: process.env.NEXT_PUBLIC_APP_SPLASH_IMAGE,
       splashBackgroundColor: process.env.NEXT_PUBLIC_SPLASH_BACKGROUND_COLOR,
       homeUrl: URL,
