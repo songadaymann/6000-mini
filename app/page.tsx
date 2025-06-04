@@ -124,28 +124,48 @@ export default function PresalePage() {
         {/* MAIN CONTENT BASED ON TAB */}
         <div className="flex-grow">
           {activeTab === "about" && (
-            <div className="space-y-2 text-[#2B2B2B]">
-              <div>
-                <h2 className="text-xl font-semibold text-[#0B0B61]">Ticker: $TAXES</h2>
+            <div className="space-y-6 text-[#0B0B61] leading-relaxed">
+              {/* Token Details Section */}
+              <div className="space-y-3">
+                <h2 className="text-2xl font-bold">Token Details</h2>
+                <ul className="space-y-1 text-base">
+                  <li className="flex justify-between">
+                    <span className="font-semibold">Ticker</span>
+                    <span>$TAXES</span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span className="font-semibold">Chain</span>
+                    <span>Base</span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span className="font-semibold">Total Supply</span>
+                    <span>1,095,171.79 <span className="text-sm"></span></span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span className="font-semibold">Presale Window</span>
+                    <span>Jun 2 – Jun 9</span>
+                  </li>
+                  <li className="flex justify-between items-start">
+                    <span className="font-semibold">Distribution</span>
+                    <span className="text-right">
+                      90% presale<br />
+                      10% LP (locked)
+                    </span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span className="font-semibold">Trading</span>
+                    <span>Zero fees / taxes</span>
+                  </li>
+                </ul>
               </div>
-              <div>
-                <h2 className="text-xl font-semibold text-[#0B0B61]">Chain: <span className="text-blue-700">Base</span> (also Mainnet, OP, Arbitrum)</h2>
-              </div>
-              <div>
-                <h2 className="text-xl font-semibold text-[#0B0B61]">Total supply: 1,095,171.79 <span className="text-sm">(my exact IRS bill)</span></h2>
-              </div>
-              <div>
-                <h2 className="text-xl font-semibold text-[#0B0B61]">Presale window: Jun 2 - Jun 9 2025</h2>
-              </div>
-              <div>
-                <h2 className="text-xl font-semibold text-[#0B0B61]">Distribution: 90% to presale participants, 10% to liquidity pool (locked)</h2>
-              </div>
-              <div>
-                <h2 className="text-xl font-semibold text-[#0B0B61]">Trading: Zero fees or taxes</h2>
-              </div>
-              <div className="pt-4">
-                <h3 className="text-lg font-semibold text-[#0B0B61]">Boost your allocation (+2% each):</h3>
-                <ul className="list-disc list-inside pl-4 space-y-1">
+
+              {/* Separator */}
+              <hr className="border-[#B0B0B0]" />
+
+              {/* Boost Section */}
+              <div className="space-y-2">
+                <h2 className="text-2xl font-bold">Boost Your Allocation (+2% each)</h2>
+                <ul className="list-disc list-inside pl-4 space-y-1 text-base">
                   <li>Beat the game & sign the ending message</li>
                   <li>Own a Song-a-Day 1/1</li>
                   <li>Own 10+ Song-a-Day 1/1s</li>
