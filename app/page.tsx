@@ -256,14 +256,30 @@ export default function PresalePage() {
           onClick={() => setActiveTab("transaction")}
           className={`flex-1 py-3 font-semibold ${activeTab === "transaction" ? "text-[#0B0B61] bg-[#FFFFFF]" : "text-[#6A6A6A]"}`}
         >
-          Transaction
+          Transact
         </button>
         <button
           onClick={() => setActiveTab("about")}
-          className={`flex-1 py-3 font-semibold ${activeTab === "about" ? "text-[#0B0B61] bg-[#FFFFFF]" : "text-[#6A6A6A]"}`}
+          className={`flex-1 py-3 font-semibold border-l border-[#B0B0B0] ${activeTab === "about" ? "text-[#0B0B61] bg-[#FFFFFF]" : "text-[#6A6A6A]"}`}
         >
           About
         </button>
+        <a
+          href="https://game.songaday.world"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-1 py-3 font-semibold text-[#6A6A6A] hover:text-[#0B0B61] border-l border-[#B0B0B0]"
+        >
+          Game
+        </a>
+        <a
+          href="https://6000.songaday.world"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-1 py-3 font-semibold text-[#6A6A6A] hover:text-[#0B0B61] border-l border-[#B0B0B0]"
+        >
+          Site
+        </a>
       </nav>
     </div>
   );
