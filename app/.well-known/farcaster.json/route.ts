@@ -36,7 +36,10 @@ export async function GET() {
       webhookUrl: `${URL}/api/webhook`,
       primaryCategory: process.env.NEXT_PUBLIC_APP_PRIMARY_CATEGORY,
       tags: [],
-      heroImageUrl: process.env.NEXT_PUBLIC_APP_HERO_IMAGE,
+      heroImageUrl:
+        process.env.NEXT_PUBLIC_APP_HERO_IMAGE ||
+        process.env.NEXT_PUBLIC_APP_SPLASH_IMAGE ||
+        process.env.NEXT_PUBLIC_APP_OG_IMAGE,
       tagline: process.env.NEXT_PUBLIC_APP_TAGLINE,
       ogTitle: process.env.NEXT_PUBLIC_APP_OG_TITLE,
       ogDescription: process.env.NEXT_PUBLIC_APP_OG_DESCRIPTION,

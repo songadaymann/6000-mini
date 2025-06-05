@@ -18,6 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const FRAME_IMAGE =
     process.env.NEXT_PUBLIC_APP_FRAME_IMAGE ||
     process.env.NEXT_PUBLIC_APP_HERO_IMAGE ||
+    process.env.NEXT_PUBLIC_APP_SPLASH_IMAGE ||
     IMG;
 
   return {
