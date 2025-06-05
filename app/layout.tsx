@@ -15,6 +15,10 @@ export async function generateMetadata(): Promise<Metadata> {
   const TITLE = process.env.NEXT_PUBLIC_ONCHAINKIT_PROJECT_NAME;
   const DESC = process.env.NEXT_PUBLIC_APP_OG_DESCRIPTION;
   const IMG = process.env.NEXT_PUBLIC_APP_OG_IMAGE;
+  const FRAME_IMAGE =
+    process.env.NEXT_PUBLIC_APP_FRAME_IMAGE ||
+    process.env.NEXT_PUBLIC_APP_HERO_IMAGE ||
+    IMG;
 
   return {
     title: TITLE,
@@ -42,7 +46,7 @@ export async function generateMetadata(): Promise<Metadata> {
     other: {
       "fc:frame": JSON.stringify({
         version: "next",
-        imageUrl: process.env.NEXT_PUBLIC_APP_HERO_IMAGE,
+        imageUrl: FRAME_IMAGE,
         button: {
           title: `Launch ${TITLE}`,
           action: {
